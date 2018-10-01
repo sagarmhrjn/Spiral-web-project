@@ -7,9 +7,51 @@
         <div class="col-sm-8">
             <div class="card" style="padding: 10px 0px 10px 5px">
                 <div class="card-body">
-                    <h3 class="card-title">{{ ctx.title }}</h3>
-                    <hr>
-                    <p>{{ ctx.get_message_as_markdown }}</p>
+                    {% block title %}
+                    <h3 class="card-title">About</h3>
+                    {% endblock %}
+                    <hr align="left" width="12%">
+                    <p>My name is Sagar Maharjan, I am excited about everything that includes programming and I love working with new technology. I'm a passionate web programmer, currently working with Python and Django also I am currently giving Machine Learning a try. I don't have much of a code community and looking to grow my skill set and connect with all awesome developers out there. Looking forward to what's to come!</p>
+                    <p>I created this web-app to share some of my thoughts and experience about programming. To be honest, I'm no Python/Django expert, but we all have something good to share.</p>
+                    <p>What I like most about Python, and made me fall desperately in love with it, is how it focuses on writing clean and readable code. We all know how hard it can be to read other people’s code, especially if it is badly formatted.
+                    Python tries to avoid that using rules and tips such as the functional imposition of nesting through indentation. This feature alone makes the code much more visual. While in many languages indentation is just a suggestion, in Python becomes a rule; either you indent or it does not work. If there is something that exemplifies perfectly what I’m just saying is the Tim Peters’ Zen of Python,, which is an easter egg that can be found in Python version 2.1.2 or later by typing
+                    <span class="span-import">import this</span> in a Python interpreter</p>
+                    <blockquote class="blockquote text-center">
+                      <h5>The Zen of Python, <small>by Tim Peters</small></h5>
+                      <p>
+                        Beautiful is better than ugly.<br>
+                        Explicit is better than implicit.<br>
+                        Simple is better than complex.<br>
+                        Complex is better than complicated.<br>
+                        Flat is better than nested.<br>
+                        Sparse is better than dense.<br>
+                        Readability counts.<br>
+                        Special cases aren't special enough to break the rules.<br>
+                        Although practicality beats purity.<br>
+                        Errors should never pass silently.<br>
+                        Unless explicitly silenced.<br>
+                        If the implementation is hard to explain, it's a bad idea.<br>
+                        If the implementation is easy to explain, it may be a good idea.<br>
+                        Namespaces are one honking great idea -- let's do more of those!<br>
+                        and few more....
+                      </p>
+                    </blockquote>
+
+                    <p>
+                      This tells a lot about the Python philosophy, and why I really enjoy writing code in Python. In fact, this
+                      principles can be applied to any programming language. Writing good code, clear, readable, understandable depends
+                      more on you than on the programming language you are working with.
+                    </p>
+
+                    <p>Steve Jobs stated once that <a href="http://blogs.wsj.com/digits/2011/08/24/steve-jobss-best-quotes/" target="_blank">“simple can be harder than complex”</a>. And that's true. Requires a lot of hard work to get your thinking clean, to come up with a simple solution. But a simple solution is always better than a complex one.
+                    </p>
+
+                    <p>Simple communicates better. Simple creates a instant connection. Simplicity is something you can apply in everything in your life – not only programming.
+                    </p>
+
+                    <p>Stay humble. Be a simple person.</p>
+
+                    <p>- Sagar Maharjan</p>
                 </div>
             </div>
         </div>
