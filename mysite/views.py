@@ -8,7 +8,7 @@ from boards.models import Board
 # Create your views here.
 def home(request):
     ctx = Info.objects.all().first()
-    posts =Post.objects.all().last()
+    posts =Post.objects.all().first()
     boards = Board.objects.all()
     data = {
         'ctx': ctx,
