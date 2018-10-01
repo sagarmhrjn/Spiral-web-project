@@ -3,6 +3,14 @@ This spiral web-project is a blog, forum style of an web- application built with
 
 While I was working in this project I was learning some [Bootstrap](https://getbootstrap.com) CSS. So,you might find this website little bit more of a static. Upcoming Days, I'll work on this matter.
 
+
+## Screnshots of Login Page & HomePage
+|                          |                        |
+| -------------------------:|:------------------------- |
+| <img src="screenshot_images/login.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home.png" alt="Forest" style="width:100%"> |
+| <img src="screenshot_images/home_blog.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home_forum.png" alt="Forest" style="width:100%"> |
+
+
 To run this spiral web application in your localhost:
 
 As I've said earlier this project is built in Django Framework. You'll need [python](https://www.python.org/downloads/) 3.x 0r higher on your desktop/laptop to run this website.
