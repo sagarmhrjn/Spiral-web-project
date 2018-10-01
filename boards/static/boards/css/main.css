@@ -1,0 +1,15 @@
+body, html{
+    background-image: url('../img/random.png');
+}
+
+
+.navbar{
+    line-height: 2.8em;
+}
+
+
+
+.navbar-brand {
+  font-family: 'Tangerine', cursive;
+  font-size: 45px;
+}

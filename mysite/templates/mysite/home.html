@@ -1,0 +1,101 @@
+{% extends 'mysite/base.html' %}
+
+{% block content %}
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                Django Project
+            </span>
+        </div>
+    </div>
+
+    <section class="section section-light">
+        <h2>AUTHOR<hr align="center" width="5%"></h2>
+          <div class="media">
+              <div class="media-left">
+                <img class="admin-img responsive" src="/media/{{ ctx.image }}">
+              </div>
+            <div class="media-body">
+                <p style="margin-top: 20px">
+                {{ ctx.get_message_as_markdown|truncatechars:700 }} <a href="{% url 'mysite-about' %}">Read More?</a></p>
+            </div>
+         </div>
+    </section>
+
+    <div class="pimg2">
+    </div>
+
+    <section class="section section-blog">
+        <div class="media">
+            <div class="media-left">
+              <img src="{{ posts.author.profile.image.url }}" alt="picture of {{ posts.author }}" class="admin-img responsive">
+            </div>
+          <div class="media-body">
+              <a href="{% url 'post-detail' posts.id %}" target="_blank" style='text-decoration:none;color: #666;'><h2 class="text-left">Latest Blog Post</h2></a>
+              <a class="mr-2" href="{% url 'user-posts' posts.author.username %}" target="_blank">-{{ posts.author }}</a>
+              <small class="text-muted">{{ posts.date_posted|date:"F d, Y" }}</small><hr/>
+              <h2>{{ posts.title }}</h2>
+              <p style="margin-top: 20px">
+              {{ posts.get_content_as_markdown|truncatechars:300 }} <a href="{% url 'post-detail' posts.id %}" target="_blank">Read More?</a></p>
+          </div>
+      </div></a>
+    </section>
+
+    <div class="pimg3">
+    </div>
+
+    <section class="section section-forum">
+        <h2>Forums</h2><hr>
+        <table class="table" style="margin-top:30px">
+          <thead class="thead-dark">
+            <tr>
+              <th>Board</th>
+              <th>Posts</th>
+              <th>Topics</th>
+              <th>Last Post</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for board in boards %}
+              <tr>
+                <td>
+                  <a href="{% url 'boards-topics' board.pk %}">{{ board.name }}</a>
+                  <small class="text-muted d-block">{{ board.description }}</small>
+                </td>
+                <td class="align-middle">
+                  {{ board.get_posts_count }}
+                </td>
+                <td class="align-middle">
+                  {{ board.topics.count }}
+                </td>
+                <td class="align-middle">
+                    {% with post=board.get_last_post %}
+                      {% if post %}
+                        <small>
+                          <a href="{% url 'boards-topic_posts' board.pk post.topic.pk %}">
+                            By {{ post.created_by.username }} at {{ post.created_at }}
+                          </a>
+                        </small>
+                      {% else %}
+                        <small class="text-muted">
+                          <em>No posts yet.</em>
+                        </small>
+                      {% endif %}
+                    {% endwith %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+    </section>
+
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                Django Project
+            </span>
+        </div>
+    </div>
+
+{% endblock %}

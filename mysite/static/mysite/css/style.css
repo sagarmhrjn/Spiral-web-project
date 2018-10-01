@@ -1,0 +1,157 @@
+body, html{
+    background-image: url('../img/concrete_seamless.png');
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+
+
+.navbar-brand {
+    font-family: 'Tangerine', cursive;
+    font-size: 45px;
+
+}
+
+
+    /*IMAGES*/
+.pimg1{
+    background-image: url('../img/image1.jpg');
+    min-height: 100%
+}
+
+.pimg2{
+    background-image: url('../img/image2.jpg');
+    min-height: 400px;
+}
+
+.pimg3{
+    background-image: url('../img/image3.jpg');
+    min-height: 400px;
+}
+
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity: 0.60;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+    fixed = Parallax
+    scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+
+    /*SECTION*/
+.section{
+    text-align: justify;
+    padding:20px 130px 20px 150px;
+}
+.section h2{
+    text-align: center;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+    -webkit-transition: background-color 2s, color 2s;
+    transition: background-color 2s, color 2s
+}
+
+
+.section-light:hover{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+
+.section-blog {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+
+.section-blog:hover{
+    background-image: url('../img/greyfloral.png');
+}
+
+
+.section-forum {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+
+.section-forum:hover{
+    background-image: url('../img/random.png');
+}
+
+.admin-img{
+    height: 14em;
+    width: 85%;
+    border-radius: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.admin-img-transform{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    height: 15em;
+    width: 90%;
+    opacity: 0.5;
+    border-radius: 5px;"
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
+}
+
+.admin-img-transform:hover{
+    opacity: 1;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+    /*PARAGRAPH TEXT*/
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans{
+    background-color: transparent;
+    color: purple;
+}
+
+
+blockquote.blockquote{
+    font-size: 16px;
+    background-color: #ddd;
+    padding: 30px;
+}
+@media(max-width:568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}

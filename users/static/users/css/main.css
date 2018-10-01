@@ -1,0 +1,43 @@
+body {
+  background-image: url(../img/morty.png);
+}
+
+.navbar{
+    line-height: 2.8em;
+}
+
+
+.navbar-brand {
+  font-family: 'Tangerine', cursive;
+  font-size: 45px;
+}
+
+.logo {
+  font-family: 'Tangerine', cursive;
+  font-size: 60px;
+}
+
+.logo a {
+  color: rgba(0,0,0,.9);
+}
+
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
+}
+
+.card{
+    transition: 0.7s;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.7s;
+}
+
+.card-body:hover{
+    background-image: url(../img/sakura.png);
+}
+
+.card-footer {
+  background-image: url(../img/morty.png);
+}

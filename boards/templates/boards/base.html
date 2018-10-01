@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.min.css' %}">
+    {% block stylesheet %}
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="{% static 'boards/css/main.css' %}" type="text/css">
+    {% endblock %}
+        <!--Font-Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+
+    {% if title %}<title>Spiral - {{ title }}</title>
+    {% else %}
+    <title>Spiral</title>
+    {% endif %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="padding:0">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="{% url 'mysite-home' %}">Spiral</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="{% url 'mysite-home' %}"><span class="fa fa-home" style="margin-right: 3px"> Home</span></a>
+                    <a class="nav-item nav-link" href="{% url 'mysite-contact' %}"><span class="fa fa-envelope" style="margin-right: 3px"> Contact</span></a>
+                    <a class="nav-item nav-link" href="{% url 'blog-home' %}"><span class="fab fa-blogger" style="margin-right: 3px"> Blog</span></a>
+                    <a class="nav-item nav-link" href="{% url 'boards-home' %}"><span class="fas fa-comments" style="margin-right: 3px"> Forum</span></a>
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          {{ user.username }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+                          <a class="dropdown-item" href="{% url 'boards-home' %}">Get started</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="{% url 'profile' %}">My account</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                        </div>
+                      </li>
+                    </ul>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{% url 'login' %}"><span class="fa fa-sign-in-alt" style="margin-right: 3px"> Login</span></a>
+                        <a class="nav-item nav-link" href="{% url 'register' %}"><span class="fa fa-user-plus" style="margin-right: 3px"> Register</span></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+  <div class="container">
+    <!--Breadcrumb navbar-->
+    {% block breadcrumb %}
+    {% endblock %}
+    <!--Content section-->
+    {% block content %}
+    {% endblock %}
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'mysite/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'mysite/js/popper.min.js' %}"></script>
+    <script src="{% static 'mysite/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
