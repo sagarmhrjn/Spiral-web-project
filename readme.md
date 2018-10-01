@@ -7,8 +7,8 @@ While I was working in this project I was learning some [Bootstrap](https://getb
 ## Screnshots of Login Page & HomePage
 |                          |                        |
 | -------------------------:|:------------------------- |
-| <img src="screenshot_images/login.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home.png" alt="Forest" style="width:100%"> |
-| <img src="screenshot_images/home_blog.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home_forum.png" alt="Forest" style="width:100%"> |
+| <img src="screenshot_images/accounts/login.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home/index.png" alt="Forest" style="width:100%"> |
+| <img src="screenshot_images/home/home_blog.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home/home_forum.png" alt="Forest" style="width:100%"> |
 
 
 To run this spiral web application in your localhost:
@@ -47,3 +47,11 @@ To view the website, run the development server https://127.0.0.1/
 ```bash
     python manage.py runserver
 ```
+
+
+## More Screenshots of Spiral Web Project:
+|            Blog           |           Forum           |
+| -------------------------:|:------------------------- |
+| <img src="screenshot_images/blog/index.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/forum/index.png" alt="Forest" style="width:100%"> |
+| <img src="screenshot_images/blog/user_posts.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/forum/topics.png" alt="Forest" style="width:100%"> |
+| <img src="screenshot_images/blog/blog_detail.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/forum/reply.png" alt="Forest" style="width:100%"> |
