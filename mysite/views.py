@@ -19,7 +19,7 @@ def home(request):
 
 
 def about(request):
-    ctx = Info.objects.get(id=2)
+    ctx = Info.objects.get(id=1)
     return render(request, 'mysite/about.html', {'ctx': ctx,'title': 'About'})
 
 
