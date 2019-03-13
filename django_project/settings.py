@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'boards',
     'users.apps.UsersConfig',
     'crispy_forms',
-    'pagedown'
+    
 ]
 
 MIDDLEWARE = [
