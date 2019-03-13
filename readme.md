@@ -1,10 +1,9 @@
 # Overview
 This spiral web-project is a blog, forum style of an web- application built with Django Framework where user can write different post, start a new discussion by creating a new topic.. This can be blog post , twitter updates,etc. In several topics, other users can engage in the discussion posting replies.
 
-While I was working in this project I was learning some [Bootstrap](https://getbootstrap.com) CSS. So,you might find this website little bit more of a static. Upcoming Days, I'll work on this matter.
 
 
-## Screnshots of Login Page & HomePage
+## Login Page & HomePage
 |                          |                        |
 | -------------------------:|:------------------------- |
 | <img src="screenshot_images/accounts/login.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/home/index.png" alt="Forest" style="width:100%"> |
@@ -49,7 +48,7 @@ To view the website, run the development server https://127.0.0.1/
 ```
 
 
-## More Screenshots of Spiral Web Project:
+## Blog and Forum:
 |            Blog           |           Forum           |
 | -------------------------:|:------------------------- |
 | <img src="screenshot_images/blog/index.png" alt="Snow" style="width:100%">  |  <img src="screenshot_images/forum/index.png" alt="Forest" style="width:100%"> |
